@@ -46,6 +46,8 @@ const registerUser = catchAsync(async (req : Request, res : Response, next : Nex
     //         user
     //     }
     // });
+
+    
     sendResponse(res,{
         success : true,
         statusCode : httpStatus.CREATED,
