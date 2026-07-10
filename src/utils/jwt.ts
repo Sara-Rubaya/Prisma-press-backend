@@ -15,10 +15,16 @@ const cretaToken = (payload : JwtPayload, secret : string, expiresIn : SignOptio
 const verifyToken = ( token : string, secret : string)=>{
     try {
         const verfiedToken = jwt.verify(token, secret);
-        return verfiedToken;
+        return {
+            success : true,
+            data : verfiedToken,
+        };
     } catch (error : any) {
         console.log("Token verification failed: ", error);
-        throw new Error (error.message);
+        return{
+            success : false,
+            error : error.message
+        }
     }
 }
 
