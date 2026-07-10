@@ -8,4 +8,5 @@ import { userController } from "./user.controller";
 const router = Router();
 // ---Register user---
 router.post("/register" ,userController.registerUser )
+router.get("/me", userController.getMyProfile)
  export const userRoutes = router;
