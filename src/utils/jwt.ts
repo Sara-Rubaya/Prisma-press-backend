@@ -1,6 +1,6 @@
 import jwt, { JwtPayload, SignOptions } from "jsonwebtoken"
 
-const cretaToken = (payload : JwtPayload, secret : string, expiresIn : SignOptions) =>{
+const createToken = (payload : JwtPayload, secret : string, expiresIn : SignOptions) =>{
     const token = jwt.sign(
         payload,
         secret,
@@ -29,6 +29,6 @@ const verifyToken = ( token : string, secret : string)=>{
 }
 
 export const jwtUtils = {
-    cretaToken,
+    createToken,
     verifyToken,
 }
