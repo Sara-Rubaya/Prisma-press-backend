@@ -1,4 +1,5 @@
 {
     "vscode-pets.petColor": "lightbrown",
-    "vscode-pets.throwBallWithMouse": true
+    "vscode-pets.throwBallWithMouse": true,
+    "prisma.fileWatcher": false
 }
